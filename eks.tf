@@ -1,11 +1,3 @@
-terraform {
-  backend "s3" {
-    bucket         = "iac-terraform-states-learnarcab-eks"
-    key            = "terraform.tfstate"
-    region         = "ap-south-1"
-    dynamodb_table = "iac-terraform-states-lock-eks"
-  }
-}
 
 resource "aws_security_group" "all_worker_mgmt" {
   name_prefix = "all_worker_management"
