@@ -5,5 +5,6 @@ locals {
   aws_account_id  = "123456789"
   aws_region      = "ap-south-1"
   private_subnets = ["subnet-abcd1234567", "subnet-0198765zxywtsu", "subnet-0sqwsdsdsde2db"]
-  sshkeys        = "learna"
+  sshkeys         = "learn"
+  cidr            = ["10.14.0.0/16"]
 }

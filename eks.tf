@@ -1,4 +1,3 @@
-
 resource "aws_security_group" "all_worker_mgmt" {
   name_prefix = "all_worker_management"
   vpc_id      = local.vpc_id
@@ -7,9 +6,7 @@ resource "aws_security_group" "all_worker_mgmt" {
     from_port = 22
     to_port   = 22
     protocol  = "tcp"
-    cidr_blocks = [
-      "10.14.0.0/16"
-    ]
+    cidr_blocks = local.cidr
   }
   egress {
     from_port        = 0
@@ -28,10 +25,7 @@ resource "aws_security_group" "cluster_additional_security_group" {
     from_port = 443
     to_port   = 443
     protocol  = "tcp"
-
-    cidr_blocks = [
-      "10.14.0.0/16"    ]
-  }
+    cidr_blocks = local.cidr
   egress {
     from_port        = 0
     to_port          = 0
