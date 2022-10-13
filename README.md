@@ -1,7 +1,7 @@
 # infrastructure
 infrastructure
 
-1. First create a s3 bucket and dynamoDB table for state management.
+1. First create a s3 bucket and dynamoDB table for state management, IF needed only
   - ref the s3-dyanmodb-table.sh and
   - make changes to the variable's
       AWS_REGION, ACCOUNT_ID, PROJECT_NAME as per your account
